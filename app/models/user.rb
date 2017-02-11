@@ -8,4 +8,9 @@ class User < ApplicationRecord
     Game.where('player_one_id = ? OR player_two_id = ?', self.id, self.id)
   end
 
+
+  def games_played
+    games.count
+  end
+
 end

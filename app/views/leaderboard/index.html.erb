@@ -1,0 +1,28 @@
+<h1 class='page-header'>Leaderboard</h1>
+
+<%= image_tag('leaderboard.png') %>
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Email</th>
+      <th>Score</th>
+      <th>Games Played</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each_with_index do |user, i| %>
+      <tr>
+        <td><%= i %></td>
+        <td><%= user.email %></td>
+        <td><%= user.rating %></td>
+        <td><%= user.games_played %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
