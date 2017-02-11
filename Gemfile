@@ -18,8 +18,10 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'capybara'
   gem 'rspec-rails', '~> 3.5'
+  gem 'launchy'
 end
 
 group :test do
