@@ -11,6 +11,8 @@ gem 'turbolinks',   '~> 5'
 gem 'devise',       '~> 4'
 gem 'devise-bootstrap-views', '~> 0.0.6'
 
+gem 'puma'
+
 group :development, :test do
   gem 'byebug'
   gem 'pry-byebug'
