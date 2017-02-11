@@ -14,11 +14,11 @@ Once logged in, users can log games against other opponents, see the history of 
 
 A leaderboard keeps track of the rankings of a group of players or teams over time.  This is an [example of a leaderboard in the context of socccer](http://www.fifa.com/fifa-world-ranking/ranking-table/men/), this is an [example of a leaderboard](https://ratings.fide.com/top.phtml?list=men), in the context of chess, this is an [example of an Elo ranking](https://github.com/rgho/elo.rb) implemented in Ruby.
 
-The framework of the app already allows users to register and sign in. Your task is to implement the abilty for players to log games, see their results and update the rank of the ping pong leaderboard. Mock ups for all UI to be developed are in the app already.  Please replace the mocks with your implementation.
+The framework of the app already allows users to register and sign in. Your task is to implement the ability for players to log games, see their results and update the rank of the ping pong leaderboard. Mock ups for all UI to be developed are in the app already.  Please replace the mocks with your implementation.
 
 ## Requirements
 
-Time alotted: 4 hours. 
+Time allotted: 4 hours. 
 Mark your start and end times with your commits.
 
 Add all necessary migrations, models (with relationships, methods and validations), controllers, and tests.
