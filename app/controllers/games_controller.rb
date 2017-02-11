@@ -22,11 +22,9 @@ class GamesController < ApplicationController
     @game.player_one_id = current_user.id
 
     if @game.save
-
-      # TODO: Player rating recalculation: Not sure if this the right place for 
+      # TODO: Player rating recalculation: Not sure if this the right place for
       # this. Somehow it feels wrong having it here.
-      @game.player_one.update_rating!(@game.rating_one)
-      @game.player_two.update_rating!(@game.rating_two)
+      update_ratings_for_players(@game)
 
       redirect_to games_url, notice: 'Game was successfully created.'
     else
@@ -42,6 +40,12 @@ class GamesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def game_params
-      params.require(:game).permit(:played_on, :player_two_id, :player_one_score, :player_two_score)
+      params.require(:game).permit(:played_on, :player_two_id,
+                                   :player_one_score, :player_two_score)
+    end
+
+    def update_ratings_for_players(game)
+      game.player_one.update_rating!(game.rating_one)
+      game.player_two.update_rating!(game.rating_two)
     end
 end

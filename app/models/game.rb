@@ -42,7 +42,12 @@ class Game < ApplicationRecord
   # http://en.wikipedia.org/wiki/Elo_rating_system#Mathematical_details
   def rating_for_player(result: nil, old_rating: 1000,
                         opponent_rating: 1000, k_factor: 32)
-    (old_rating.to_f + (k_factor.to_f * (result.to_f - expected_rating(opponent_rating, old_rating))).to_i)
+    (old_rating.to_f + (k_factor.to_f * (
+        result.to_f - expected_rating(
+          opponent_rating, old_rating
+        )
+      )).to_i
+    )
   end
 
   # Based on Elo Rating System... thanks to all those hours playing Destiny I
