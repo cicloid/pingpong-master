@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.feature "Add new games", type: :feature do
+  let!(:player_one) { User.create!(email: 'playerone@me.com', password: '123123123') }
+  let!(:player_two) { User.create!(email: 'playertwo@me.com', password: '123123123') }
+
   it "adds a new game and shows it on the user history" do
     login_as user: "who@knows.com", password: "123123123"
     click_link "Log Game"
