@@ -7,7 +7,16 @@ RSpec.feature "Add new games", type: :feature do
     fill_in "Your Score", with: "21"
     fill_in "Their Score", with: "19"
     click_on "Save"
-    expect(page).to have_text("Game was succesfully created.")
+    expect(page).to have_text("Game was successfully created")
+  end
+
+  it "should fail when points difference is less than 2" do
+    login_as user: "who@knows.com", password: "123123123"
+    click_link "Log Game"
+    fill_in "Your Score", with: "21"
+    fill_in "Their Score", with: "20"
+    click_on "Save"
+    expect(page).to have_text("prohibited this game from being saved")
   end
 
   def login_as(user: nil, password: nil)
