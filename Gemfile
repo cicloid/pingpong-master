@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails',        '5.0.1'
-gem 'sqlite3'
 gem 'uglifier',     '>= 1.3.0'
 gem 'sass-rails',   '~> 5.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -22,6 +21,7 @@ group :development, :test do
   gem 'capybara'
   gem 'rspec-rails', '~> 3.5'
   gem 'launchy'
+  gem 'sqlite3'
 end
 
 group :test do
@@ -30,4 +30,8 @@ end
 
 group :development do
   gem 'web-console', '~> 2.0'
+end
+
+group :production do
+  gem "postgresql"
 end
