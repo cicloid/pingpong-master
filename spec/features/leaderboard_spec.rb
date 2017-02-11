@@ -13,7 +13,6 @@ RSpec.feature "Leaderboard", type: :feature do
     select player_two.email, from: "game_player_two_id"
     click_on "Save"
     click_on "Leaderboard"
-    save_and_open_page
     expect(page).to have_text("985")
     expect(page).to have_text("1016")
   end
