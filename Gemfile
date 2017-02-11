@@ -21,7 +21,7 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'capybara'
   gem 'rspec-rails', '~> 3.5'
-
+  gem 'launchy'
 end
 
 group :test do
