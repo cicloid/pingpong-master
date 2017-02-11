@@ -19,7 +19,7 @@
 
     <div class="field">
       <%= f.label :player_two, "Opponent" %>
-      <%= f.collection_select :player_two_id, User.all, :id, :email %>
+      <%= f.collection_select :player_two_id, current_user.opponents, :id, :email %>
     </div>
 
     <div class="field">
